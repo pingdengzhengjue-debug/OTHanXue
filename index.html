@@ -406,6 +406,88 @@ footer span{color:var(--vermilion);}
   padding-top: 2rem;
 }
 
+
+/* ── 經典薈萃 CLASSICS ── */
+.classics-treasury {
+  background: var(--warm-white);
+  padding: 6rem 2rem;
+}
+.classics-treasury .eyebrow { justify-content: center; }
+.classics-treasury h2 { text-align: center; }
+.classics-treasury > .container > p {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+}
+
+.treasury-book {
+  margin-bottom: 4rem;
+}
+.treasury-book:last-child { margin-bottom: 0; }
+
+.treasury-book-header {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1.8rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(26,20,16,0.12);
+}
+.treasury-book-glyph {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: var(--vermilion);
+  line-height: 1;
+  min-width: 2.5rem;
+  text-align: center;
+}
+.treasury-book-info { flex: 1; }
+.treasury-book-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: 0.15em;
+  display: block;
+}
+.treasury-book-desc {
+  font-size: 0.78rem;
+  color: var(--ash);
+  letter-spacing: 0.2em;
+  margin-top: 0.2rem;
+  display: block;
+}
+
+.treasury-verses {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.2rem;
+}
+.treasury-verse {
+  background: var(--paper);
+  border-left: 3px solid var(--vermilion);
+  padding: 1.4rem 1.5rem;
+  position: relative;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.treasury-verse:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(26,20,16,0.1);
+}
+.treasury-verse-text {
+  font-size: clamp(0.95rem, 2.2vw, 1.05rem);
+  line-height: 2.1;
+  letter-spacing: 0.1em;
+  color: var(--ink);
+  font-weight: 400;
+}
+.treasury-verse-ref {
+  font-size: 0.68rem;
+  letter-spacing: 0.3em;
+  color: var(--ash);
+  margin-top: 0.8rem;
+  display: block;
+}
+
 @media(max-width:600px){.nav-links{display:none;}.tao-step+.tao-step::before{display:none;}.big-char::after{display:none;}}
 </style>
 </head>
@@ -430,6 +512,7 @@ footer span{color:var(--vermilion);}
     <li><a href="#datong" data-i18n="nav-datong">大同</a></li>
     <li><a href="#jiao" data-i18n="nav-jiao">教化</a></li>
     <li><a href="#sanzijing" data-i18n="nav-szj">三字經</a></li>
+    <li><a href="#classics" data-i18n="nav-classics">經典</a></li>
     <li><a href="#xiao" data-i18n="nav-xiao">孝道</a></li>
     <li><a href="#events" data-i18n="nav-events">活動</a></li>
   </ul>
@@ -643,6 +726,194 @@ footer span{color:var(--vermilion);}
   <p class="szj-closing" data-i18n="szj-closing">
     《三字經》雖只三字一句，卻字字珠璣，涵蓋天文地理、歷史人倫、修身治學之道。老祖宗將千年智慧濃縮於此，正是為了讓每一個人——無論老幼、無論貴賤——都能輕易接觸聖賢的光明。在當下這個亂世，回歸經典，不是復古，而是回家。
   </p>
+</section>
+
+
+<!-- 經典薈萃 ════════════════════════════════════════════════════════════════ -->
+<section class="classics-treasury" id="classics">
+  <div class="container">
+    <div class="eyebrow" data-i18n="ct-eyebrow">經典薈萃</div>
+    <h2 data-i18n="ct-h2">聖賢典籍精華</h2>
+    <p data-i18n="ct-intro">老祖宗留下的智慧，字字千金。以下精選弟子規、孝經、太上感應篇、了凡四訓、論語中的經典句子，願讀者細細品味，深植於心。</p>
+
+    <!-- 弟子規 -->
+    <div class="treasury-book">
+      <div class="treasury-book-header">
+        <div class="treasury-book-glyph">規</div>
+        <div class="treasury-book-info">
+          <span class="treasury-book-title">《弟子規》</span>
+          <span class="treasury-book-desc">清·李毓秀著　蒙學必讀　做人根本規範</span>
+        </div>
+      </div>
+      <div class="treasury-verses">
+        <div class="treasury-verse">
+          <div class="treasury-verse-text">父母呼，應勿緩；<br>父母命，行勿懶。<br>父母教，須敬聽；<br>父母責，須順承。</div>
+          <span class="treasury-verse-ref">〈入則孝〉</span>
+        </div>
+        <div class="treasury-verse">
+          <div class="treasury-verse-text">親有疾，藥先嚐；<br>晝夜侍，不離床。<br>喪三年，常悲咽；<br>居處變，酒肉絕。</div>
+          <span class="treasury-verse-ref">〈入則孝〉</span>
+        </div>
+        <div class="treasury-verse">
+          <div class="treasury-verse-text">兄道友，弟道恭；<br>兄弟睦，孝在中。<br>財物輕，怨何生；<br>言語忍，忿自泯。</div>
+          <span class="treasury-verse-ref">〈出則弟〉</span>
+        </div>
+        <div class="treasury-verse">
+          <div class="treasury-verse-text">凡出言，信為先；<br>詐與妄，奚可焉。<br>話說多，不如少；<br>惟其是，勿佞巧。</div>
+          <span class="treasury-verse-ref">〈謹〉</span>
+        </div>
+        <div class="treasury-verse">
+          <div class="treasury-verse-text">見人善，即思齊；<br>縱去遠，以漸躋。<br>見人惡，即內省；<br>有則改，無加警。</div>
+          <span class="treasury-verse-ref">〈仁〉</span>
+        </div>
+        <div class="treasury-verse">
+          <div class="treasury-verse-text">不力行，但學文；<br>長浮華，成何人。<br>但力行，不學文；<br>任己見，昧理真。</div>
+          <span class="treasury-verse-ref">〈餘力學文〉</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 孝經 -->
+    <div class="treasury-book">
+      <div class="treasury-book-header">
+        <div class="treasury-book-glyph">孝</div>
+        <div class="treasury-book-info">
+          <span class="treasury-book-title">《孝經》</span>
+          <span class="treasury-book-desc">孔子述　曾子記　百善孝為先</span>
+        </div>
+      </div>
+      <div class="treasury-verses">
+        <div class="treasury-verse">
+          <div class="treasury-verse-text">夫孝，德之本也，<br>教之所由生也。</div>
+          <span class="treasury-verse-ref">〈開宗明義章〉</span>
+        </div>
+        <div class="treasury-verse">
+          <div class="treasury-verse-text">身體髮膚，受之父母，<br>不敢毀傷，孝之始也。<br>立身行道，揚名於後世，<br>以顯父母，孝之終也。</div>
+          <span class="treasury-verse-ref">〈開宗明義章〉</span>
+        </div>
+        <div class="treasury-verse">
+          <div class="treasury-verse-text">愛親者，不敢惡於人；<br>敬親者，不敢慢於人。</div>
+          <span class="treasury-verse-ref">〈天子章〉</span>
+        </div>
+        <div class="treasury-verse">
+          <div class="treasury-verse-text">孝子之事親也，<br>居則致其敬，<br>養則致其樂，<br>病則致其憂，<br>喪則致其哀，<br>祭則致其嚴。</div>
+          <span class="treasury-verse-ref">〈紀孝行章〉</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 太上感應篇 -->
+    <div class="treasury-book">
+      <div class="treasury-book-header">
+        <div class="treasury-book-glyph">善</div>
+        <div class="treasury-book-info">
+          <span class="treasury-book-title">《太上感應篇》</span>
+          <span class="treasury-book-desc">道家勸善要典　因果善惡之綱</span>
+        </div>
+      </div>
+      <div class="treasury-verses">
+        <div class="treasury-verse">
+          <div class="treasury-verse-text">禍福無門，惟人自召；<br>善惡之報，如影隨形。</div>
+          <span class="treasury-verse-ref">〈開篇〉</span>
+        </div>
+        <div class="treasury-verse">
+          <div class="treasury-verse-text">是道則進，非道則退。<br>不履邪徑，不欺暗室。</div>
+          <span class="treasury-verse-ref">〈正道〉</span>
+        </div>
+        <div class="treasury-verse">
+          <div class="treasury-verse-text">積德累功，慈心於物。<br>忠孝友悌，正己化人。</div>
+          <span class="treasury-verse-ref">〈行善〉</span>
+        </div>
+        <div class="treasury-verse">
+          <div class="treasury-verse-text">諸惡莫作，眾善奉行。<br>算減則貧耗，多逢憂患。<br>算盡則死。</div>
+          <span class="treasury-verse-ref">〈因果〉</span>
+        </div>
+        <div class="treasury-verse">
+          <div class="treasury-verse-text">故吉人語善、視善、行善，<br>一日有三善，三年天必降之福。</div>
+          <span class="treasury-verse-ref">〈積善〉</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 了凡四訓 -->
+    <div class="treasury-book">
+      <div class="treasury-book-header">
+        <div class="treasury-book-glyph">命</div>
+        <div class="treasury-book-info">
+          <span class="treasury-book-title">《了凡四訓》</span>
+          <span class="treasury-book-desc">明·袁了凡著　命由己造　福自我求</span>
+        </div>
+      </div>
+      <div class="treasury-verses">
+        <div class="treasury-verse">
+          <div class="treasury-verse-text">命由己造，福自己求。<br>詩書所稱，的確不謬。</div>
+          <span class="treasury-verse-ref">〈立命之學〉</span>
+        </div>
+        <div class="treasury-verse">
+          <div class="treasury-verse-text">從前種種，譬如昨日死；<br>從後種種，譬如今日生。</div>
+          <span class="treasury-verse-ref">〈改過之法〉</span>
+        </div>
+        <div class="treasury-verse">
+          <div class="treasury-verse-text">務要積德，務要包荒，<br>務要和愛，務要惜精神。</div>
+          <span class="treasury-verse-ref">〈積善之方〉</span>
+        </div>
+        <div class="treasury-verse">
+          <div class="treasury-verse-text">謙虛者受益，自滿者招損。<br>凡有志於學問者，不可不知也。</div>
+          <span class="treasury-verse-ref">〈謙德之效〉</span>
+        </div>
+        <div class="treasury-verse">
+          <div class="treasury-verse-text">善改過者，未禁其事，<br>先明其理；<br>理既明，則過將自止。</div>
+          <span class="treasury-verse-ref">〈改過之法〉</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 論語 -->
+    <div class="treasury-book">
+      <div class="treasury-book-header">
+        <div class="treasury-book-glyph">仁</div>
+        <div class="treasury-book-info">
+          <span class="treasury-book-title">《論語》</span>
+          <span class="treasury-book-desc">孔子及門人語錄　儒家第一經典</span>
+        </div>
+      </div>
+      <div class="treasury-verses">
+        <div class="treasury-verse">
+          <div class="treasury-verse-text">學而時習之，不亦說乎？<br>有朋自遠方來，不亦樂乎？<br>人不知而不慍，不亦君子乎？</div>
+          <span class="treasury-verse-ref">〈學而篇〉</span>
+        </div>
+        <div class="treasury-verse">
+          <div class="treasury-verse-text">吾日三省吾身：<br>為人謀而不忠乎？<br>與朋友交而不信乎？<br>傳不習乎？</div>
+          <span class="treasury-verse-ref">〈學而篇〉</span>
+        </div>
+        <div class="treasury-verse">
+          <div class="treasury-verse-text">己所不欲，勿施於人。</div>
+          <span class="treasury-verse-ref">〈顏淵篇〉</span>
+        </div>
+        <div class="treasury-verse">
+          <div class="treasury-verse-text">君子坦蕩蕩，小人長戚戚。</div>
+          <span class="treasury-verse-ref">〈述而篇〉</span>
+        </div>
+        <div class="treasury-verse">
+          <div class="treasury-verse-text">見賢思齊焉，<br>見不賢而內自省也。</div>
+          <span class="treasury-verse-ref">〈里仁篇〉</span>
+        </div>
+        <div class="treasury-verse">
+          <div class="treasury-verse-text">三人行，必有我師焉；<br>擇其善者而從之，<br>其不善者而改之。</div>
+          <span class="treasury-verse-ref">〈述而篇〉</span>
+        </div>
+        <div class="treasury-verse">
+          <div class="treasury-verse-text">德不孤，必有鄰。</div>
+          <span class="treasury-verse-ref">〈里仁篇〉</span>
+        </div>
+        <div class="treasury-verse">
+          <div class="treasury-verse-text">過而不改，是謂過矣。</div>
+          <span class="treasury-verse-ref">〈衛靈公篇〉</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </section>
 
 <!-- 孝道 ═══════════════════════════════════════════════════════════════════ -->
@@ -1021,6 +1292,10 @@ var TRANSLATIONS = {
     "szj-src6":"Three Character Classic","szj-v6":"Diligence brings achievement;<br>play brings no benefit.<br>Be warned and strive<br>with all your effort.",
     "szj-src7":"Three Character Classic","szj-v7":"Jade unpolished cannot become a vessel.<br>A person unlearned cannot know the Way.",
     "szj-closing":"Though written in lines of just three characters, every word of the Three Character Classic is a gem. In this turbulent age, returning to the classics is not nostalgia. It is coming home.",
+    "nav-classics":"Classics",
+    "ct-eyebrow":"Treasury of Classics",
+    "ct-h2":"Gems from the Sagely Canons",
+    "ct-intro":"The wisdom left by our ancestors is worth its weight in gold. Below are selected passages from Di Zi Gui, the Classic of Filial Piety, Taishang Ganying Pian, Liaofan's Four Lessons, and the Analects. May each reader savour them deeply.",
     "ev-intro":"The Ottawa Sinology Society hosts Zoom classes, study groups, and cultural events. All are welcome."},
   fr: {
     "nav-org":"Société de Sinologie d'Ottawa","nav-org-en":"Ottawa Sinology Society",
@@ -1083,6 +1358,10 @@ var TRANSLATIONS = {
     "szj-src6":"Classique des trois caractères","szj-v6":"La diligence apporte la réussite ;<br>le jeu n'apporte rien.<br>Soyez averti et efforcez-vous<br>de tout votre effort.",
     "szj-src7":"Classique des trois caractères","szj-v7":"Le jade non taillé ne peut devenir un objet précieux.<br>Un homme sans étude ne peut connaître la Voie.",
     "szj-closing":"Bien qu'écrit en lignes de seulement trois caractères, chaque mot est un joyau. En ce temps de troubles, retourner aux classiques n'est pas de la nostalgie. C'est rentrer à la maison.",
+    "nav-classics":"Classiques",
+    "ct-eyebrow":"Trésor des classiques",
+    "ct-h2":"Joyaux des canons des sages",
+    "ct-intro":"La sagesse laissée par nos ancêtres vaut son pesant d'or. Voici des passages choisis du Di Zi Gui, du Classique de la piété filiale, du Taishang Ganying Pian, des Quatre Leçons de Liaofan et des Entretiens. Que chaque lecteur les savoure profondément.",
     "ev-intro":"La Société de Sinologie d'Ottawa organise des cours Zoom, groupes d'étude et activités culturelles. Tous sont les bienvenus."}
 };
 
