@@ -330,81 +330,7 @@ footer span{color:var(--vermilion);}
 .pillar-char-xiao { color: var(--vermilion) !important; }
 
 
-/* ── 三字經 BAND ── */
-.sanzijing-band {
-  background: var(--paper);
-  padding: 6rem 2rem;
-  position: relative;
-  overflow: hidden;
-}
-.sanzijing-band::before {
-  content: '經';
-  position: absolute;
-  font-size: 28rem;
-  font-weight: 900;
-  color: rgba(26,20,16,0.04);
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  line-height: 1;
-}
-.szj-intro {
-  max-width: 720px;
-  margin: 0 auto 3rem;
-  text-align: center;
-}
-.szj-intro .eyebrow { justify-content: center; }
-.szj-intro h2 { text-align: center; }
-.szj-intro p { color: #3a2f25; }
 
-.szj-verses {
-  max-width: 860px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-}
-.szj-card {
-  background: var(--ink);
-  padding: 2rem 1.6rem;
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.3s;
-}
-.szj-card:hover { transform: translateY(-3px); }
-.szj-card::after {
-  content: '';
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--vermilion), var(--gold));
-}
-.szj-verse {
-  font-size: clamp(1rem, 2.8vw, 1.2rem);
-  font-weight: 600;
-  color: var(--gold);
-  letter-spacing: 0.12em;
-  line-height: 2;
-  margin-bottom: 1rem;
-}
-
-.szj-source {
-  font-size: 0.68rem;
-  letter-spacing: 0.3em;
-  color: var(--vermilion);
-  display: block;
-  margin-bottom: 0.8rem;
-}
-.szj-closing {
-  max-width: 680px;
-  margin: 3rem auto 0;
-  text-align: center;
-  font-size: 1rem;
-  color: #3a2f25;
-  line-height: 2;
-  border-top: 1px solid rgba(26,20,16,0.1);
-  padding-top: 2rem;
-}
 
 
 /* ── 經典薈萃 CLASSICS ── */
@@ -488,6 +414,127 @@ footer span{color:var(--vermilion);}
   display: block;
 }
 
+
+/* ── VIRTUE CIRCLE ── */
+.virtue-circle-wrap {
+  position: relative;
+  width: 340px;
+  height: 340px;
+  margin: 2.5rem auto;
+}
+
+/* Orbit ring */
+.virtue-circle-wrap::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 280px; height: 280px;
+  border-radius: 50%;
+  border: 1px solid rgba(184,134,11,0.35);
+}
+.virtue-circle-wrap::after {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 240px; height: 240px;
+  border-radius: 50%;
+  border: 1px dashed rgba(184,134,11,0.15);
+}
+
+/* Center 孝 */
+.virtue-center {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 110px; height: 110px;
+  border-radius: 50%;
+  background: var(--vermilion);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: 0 0 40px rgba(192,57,43,0.5);
+}
+.virtue-center-char {
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: white;
+  line-height: 1;
+}
+.virtue-center-label {
+  font-size: 0.55rem;
+  letter-spacing: 0.15em;
+  color: rgba(255,255,255,0.75);
+  margin-top: 0.3rem;
+}
+
+/* Satellite virtues */
+.virtue-satellite {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 76px; height: 76px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(184,134,11,0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%)
+             rotate(var(--angle))
+             translateY(-130px)
+             rotate(calc(-1 * var(--angle)));
+  transition: background 0.3s, box-shadow 0.3s;
+  z-index: 2;
+}
+.virtue-satellite:hover {
+  background: rgba(184,134,11,0.2);
+  box-shadow: 0 0 20px rgba(184,134,11,0.3);
+}
+.virtue-char {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--gold);
+  line-height: 1;
+}
+.virtue-label {
+  font-size: 0.5rem;
+  letter-spacing: 0.1em;
+  color: rgba(245,240,232,0.5);
+  margin-top: 0.25rem;
+  text-align: center;
+}
+
+@media (max-width: 400px) {
+  .virtue-circle-wrap { width: 280px; height: 280px; }
+  .virtue-circle-wrap::before { width: 230px; height: 230px; }
+  .virtue-satellite {
+    transform: translate(-50%, -50%)
+               rotate(var(--angle))
+               translateY(-106px)
+               rotate(calc(-1 * var(--angle)));
+  }
+}
+
+
+/* ── 聖賢經典 BAND ── */
+.sanzijing-band { background: var(--paper); padding: 6rem 2rem; position: relative; overflow: hidden; }
+.sanzijing-band::before { content: '經'; position: absolute; font-size: 28rem; font-weight: 900; color: rgba(26,20,16,0.04); top: 50%; left: 50%; transform: translate(-50%,-50%); pointer-events: none; line-height: 1; }
+.szj-intro { max-width: 720px; margin: 0 auto 3rem; text-align: center; }
+.szj-intro .eyebrow { justify-content: center; }
+.szj-intro h2 { text-align: center; }
+.szj-intro p { color: #3a2f25; }
+.szj-verses { max-width: 860px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; }
+.szj-card { background: var(--ink); padding: 1.8rem 1.5rem; position: relative; overflow: hidden; transition: transform 0.3s; }
+.szj-card:hover { transform: translateY(-3px); }
+.szj-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--vermilion), var(--gold)); }
+.szj-verse { font-size: clamp(1rem, 2.5vw, 1.1rem); font-weight: 600; color: var(--gold); letter-spacing: 0.12em; line-height: 2; margin-bottom: 0.6rem; }
+.szj-source { font-size: 0.65rem; letter-spacing: 0.3em; color: var(--vermilion); display: block; margin-bottom: 0.7rem; }
+.szj-closing { max-width: 680px; margin: 3rem auto 0; text-align: center; font-size: 1rem; color: #3a2f25; line-height: 2; border-top: 1px solid rgba(26,20,16,0.1); padding-top: 2rem; }
+
 @media(max-width:600px){.nav-links{display:none;}.tao-step+.tao-step::before{display:none;}.big-char::after{display:none;}}
 </style>
 </head>
@@ -511,8 +558,8 @@ footer span{color:var(--vermilion);}
     <li><a href="#tao" data-i18n="nav-tao">因果</a></li>
     <li><a href="#datong" data-i18n="nav-datong">大同</a></li>
     <li><a href="#jiao" data-i18n="nav-jiao">教化</a></li>
-    <li><a href="#sanzijing" data-i18n="nav-szj">三字經</a></li>
     <li><a href="#classics" data-i18n="nav-classics">經典</a></li>
+    <li><a href="#sanzijing" data-i18n="nav-classics">經典</a></li>
     <li><a href="#xiao" data-i18n="nav-xiao">孝道</a></li>
     <li><a href="#events" data-i18n="nav-events">活動</a></li>
   </ul>
@@ -661,13 +708,37 @@ footer span{color:var(--vermilion);}
     <div class="eyebrow" style="color:var(--gold);justify-content:center;" data-i18n="pillars-eyebrow">核心價值</div>
     <h2 data-i18n="pillars-h2">聖賢智慧的六大根基</h2>
     <p data-i18n="pillars-p">老祖宗以一生體悟凝煉而成，歷千年而不衰的人生根本。</p>
-    <div class="pillar-grid">
-      <div class="pillar"><span class="pillar-char">仁</span><span class="pillar-label" data-i18n="p1">愛人之心</span></div>
-      <div class="pillar"><span class="pillar-char">義</span><span class="pillar-label" data-i18n="p2">正直之道</span></div>
-      <div class="pillar"><span class="pillar-char">禮</span><span class="pillar-label" data-i18n="p3">秩序之美</span></div>
-      <div class="pillar"><span class="pillar-char">智</span><span class="pillar-label" data-i18n="p4">明辨之能</span></div>
-      <div class="pillar"><span class="pillar-char">信</span><span class="pillar-label" data-i18n="p5">誠實之德</span></div>
-      <div class="pillar"><span class="pillar-char pillar-char-xiao">孝</span><span class="pillar-label" data-i18n="p6">百善之首</span></div>
+    <div class="virtue-circle-wrap">
+      <!-- 孝 center -->
+      <div class="virtue-center">
+        <span class="virtue-center-char">孝</span>
+        <span class="virtue-center-label" data-i18n="p6">百善之首</span>
+      </div>
+      <!-- 仁 top -->
+      <div class="virtue-satellite" style="--angle:270deg">
+        <span class="virtue-char">仁</span>
+        <span class="virtue-label" data-i18n="p1">愛人之心</span>
+      </div>
+      <!-- 義 top-right -->
+      <div class="virtue-satellite" style="--angle:342deg">
+        <span class="virtue-char">義</span>
+        <span class="virtue-label" data-i18n="p2">正直之道</span>
+      </div>
+      <!-- 禮 bottom-right -->
+      <div class="virtue-satellite" style="--angle:54deg">
+        <span class="virtue-char">禮</span>
+        <span class="virtue-label" data-i18n="p3">秩序之美</span>
+      </div>
+      <!-- 智 bottom-left -->
+      <div class="virtue-satellite" style="--angle:126deg">
+        <span class="virtue-char">智</span>
+        <span class="virtue-label" data-i18n="p4">明辨之能</span>
+      </div>
+      <!-- 信 top-left -->
+      <div class="virtue-satellite" style="--angle:198deg">
+        <span class="virtue-char">信</span>
+        <span class="virtue-label" data-i18n="p5">誠實之德</span>
+      </div>
     </div>
     <p style="max-width:600px;margin:0 auto;" data-i18n="pillars-closing">漢學不是過去，她是當下；不是書本，她是生命。願每一位與老祖宗智慧相遇的人，都能在這份千年的溫暖中，找到回家的路。</p>
   </div>
@@ -676,57 +747,6 @@ footer span{color:var(--vermilion);}
 
 
 
-<!-- 三字經 ══════════════════════════════════════════════════════════════════ -->
-<section class="sanzijing-band" id="sanzijing">
-  <div class="szj-intro">
-    <div class="eyebrow" data-i18n="szj-eyebrow">三字經 · 亂世中的明燈</div>
-    <h2 data-i18n="szj-h2">為何要學習<br>老祖宗的經典？</h2>
-    <p data-i18n="szj-p1">當今世界，道德淪喪，人心惶惶，家庭破碎，社會動盪——正是亂世。然而，早在一千多年前，老祖宗便已預見，並將解方凝煉於一部部經典之中。《三字經》首句便告訴我們：人的本性本是善良的，之所以變壞，是因為缺乏教育。這正是我們今日迫切需要回歸聖賢教誨的原因。</p>
-  </div>
-
-  <div class="szj-verses">
-
-    <div class="szj-card">
-      <span class="szj-source" data-i18n="szj-src1">《三字經》首章</span>
-      <div class="szj-verse" data-i18n="szj-v1">人之初，性本善。<br>性相近，習相遠。</div>
-    </div>
-
-    <div class="szj-card">
-      <span class="szj-source" data-i18n="szj-src2">《三字經》首章</span>
-      <div class="szj-verse" data-i18n="szj-v2">苟不教，性乃遷。<br>教之道，貴以專。</div>
-    </div>
-
-    <div class="szj-card">
-      <span class="szj-source" data-i18n="szj-src3">《三字經》</span>
-      <div class="szj-verse" data-i18n="szj-v3">養不教，父之過。<br>教不嚴，師之惰。</div>
-    </div>
-
-    <div class="szj-card">
-      <span class="szj-source" data-i18n="szj-src4">《三字經》</span>
-      <div class="szj-verse" data-i18n="szj-v4">為學者，必有初。<br>小學終，至四書。</div>
-    </div>
-
-    <div class="szj-card">
-      <span class="szj-source" data-i18n="szj-src5">《三字經》</span>
-      <div class="szj-verse" data-i18n="szj-v5">曰仁義，禮智信。<br>此五常，不容紊。</div>
-    </div>
-
-    <div class="szj-card">
-      <span class="szj-source" data-i18n="szj-src6">《三字經》</span>
-      <div class="szj-verse" data-i18n="szj-v6">勤有功，戲無益。<br>戒之哉，宜勉力。</div>
-    </div>
-
-    <div class="szj-card">
-      <span class="szj-source" data-i18n="szj-src7">《三字經》</span>
-      <div class="szj-verse" data-i18n="szj-v7">玉不琢，不成器。<br>人不學，不知道。</div>
-    </div>
-
-    </div>
-
-  <p class="szj-closing" data-i18n="szj-closing">
-    《三字經》雖只三字一句，卻字字珠璣，涵蓋天文地理、歷史人倫、修身治學之道。老祖宗將千年智慧濃縮於此，正是為了讓每一個人——無論老幼、無論貴賤——都能輕易接觸聖賢的光明。在當下這個亂世，回歸經典，不是復古，而是回家。
-  </p>
-</section>
 
 
 <!-- 經典薈萃 ════════════════════════════════════════════════════════════════ -->
@@ -916,6 +936,34 @@ footer span{color:var(--vermilion);}
   </div>
 </section>
 
+<!-- 為何學習聖賢經典 ═══════════════════════════════════════════════════════ -->
+<section class="sanzijing-band" id="sanzijing">
+  <div class="container">
+    <div class="szj-intro">
+      <div class="eyebrow" data-i18n="szj-eyebrow">聖賢經典</div>
+      <h2 data-i18n="szj-h2">為何要學習<br>老祖宗的經典？</h2>
+      <p data-i18n="szj-p1">當今世界，道德淪喪，人心惶惶，家庭破碎，社會動盪。然而，答案早已存在——就在老祖宗留下的聖賢典籍之中。從《三字經》到《論語》，從《孝經》到《大學》，這些經典跨越千年，字字指向同一個真理：人性本善，教育為本，修身為先。</p>
+    </div>
+    <div class="szj-verses">
+      <div class="szj-card"><span class="szj-source" data-i18n="szj-src1">《三字經》</span><div class="szj-verse" data-i18n="szj-v1">人之初，性本善。<br>性相近，習相遠。</div></div>
+      <div class="szj-card"><span class="szj-source" data-i18n="szj-src2">《三字經》</span><div class="szj-verse" data-i18n="szj-v2">苟不教，性乃遷。<br>教之道，貴以專。</div></div>
+      <div class="szj-card"><span class="szj-source" data-i18n="szj-src3">《三字經》</span><div class="szj-verse" data-i18n="szj-v3">人不學，不知義。<br>為人子，方少時，<br>親師友，習禮儀。</div></div>
+      <div class="szj-card"><span class="szj-source" data-i18n="szj-src7">《三字經》</span><div class="szj-verse" data-i18n="szj-v7">玉不琢，不成器。<br>人不學，不知道。</div></div>
+      <div class="szj-card"><span class="szj-source" data-i18n="szj-src4">《三字經》</span><div class="szj-verse" data-i18n="szj-v4">昔仲尼，師項橐；<br>古聖賢，尚勤學。</div></div>
+      <div class="szj-card"><span class="szj-source" data-i18n="szj-src-dzg">《弟子規》首句 · 源自《論語·學而》</span><div class="szj-verse" data-i18n="szj-v-dzg">弟子規，聖人訓：<br>首孝弟，次謹信，<br>泛愛眾，而親仁，<br>有餘力，則學文。</div></div>
+      <div class="szj-card"><span class="szj-source" data-i18n="szj-src-lunyu1">《論語·學而篇》</span><div class="szj-verse" data-i18n="szj-v-lunyu1">學而時習之，不亦說乎？<br>有朋自遠方來，不亦樂乎？<br>人不知而不慍，不亦君子乎？</div></div>
+      <div class="szj-card"><span class="szj-source" data-i18n="szj-src-lunyu2">《論語·公冶長篇》</span><div class="szj-verse" data-i18n="szj-v-lunyu2">敏而好學，不恥下問。</div></div>
+      <div class="szj-card"><span class="szj-source" data-i18n="szj-src-xjing">《孝經·開宗明義章》</span><div class="szj-verse" data-i18n="szj-v-xjing">夫孝，德之本也，<br>教之所由生也。</div></div>
+      <div class="szj-card"><span class="szj-source" data-i18n="szj-src-daxue1">《大學》</span><div class="szj-verse" data-i18n="szj-v-daxue1">大學之道，在明明德，<br>在親民，在止於至善。</div></div>
+      <div class="szj-card"><span class="szj-source" data-i18n="szj-src-daxue2">《大學》</span><div class="szj-verse" data-i18n="szj-v-daxue2">自天子以至於庶人，<br>壹是皆以修身為本。</div></div>
+      <div class="szj-card"><span class="szj-source" data-i18n="szj-src-zy">《中庸》</span><div class="szj-verse" data-i18n="szj-v-zy">博學之，審問之，<br>慎思之，明辨之，<br>篤行之。</div></div>
+      <div class="szj-card"><span class="szj-source" data-i18n="szj-src-mz1">《孟子·告子上》</span><div class="szj-verse" data-i18n="szj-v-mz1">仁，人心也；<br>義，人路也。<br>舍其路而弗由，<br>放其心而不知求，哀哉！</div></div>
+      <div class="szj-card"><span class="szj-source" data-i18n="szj-src-mz2">《孟子·告子上》</span><div class="szj-verse" data-i18n="szj-v-mz2">學問之道無他，<br>求其放心而已矣。</div></div>
+    </div>
+    <p class="szj-closing" data-i18n="szj-closing">聖賢之書，非一家之言，乃千年文明之結晶。《三字經》啟蒙人性之善，《弟子規》教以行為規範，《孝經》立德行之根，《論語》示君子之道，《大學》明修身之本，《中庸》教處世之方，《孟子》彰仁義之性。七部經典，一貫之道：人性本善，學以復善，行以致善，此乃聖賢教育之核心，也是漢學傳承之使命。</p>
+  </div>
+</section>
+
 <!-- 孝道 ═══════════════════════════════════════════════════════════════════ -->
 <section class="xiao" id="xiao">
   <div class="container">
@@ -1087,6 +1135,12 @@ footer span{color:var(--vermilion);}
     </div>
   </div>
   <p data-i18n="footer-tagline">弘揚中華文化　傳承聖賢教誨　共建大同世界</p>
+  <p style="margin-top:0.8rem;">
+    <a href="mailto:ottawasinologysociety@gmail.com"
+       style="color:var(--gold);text-decoration:none;letter-spacing:0.15em;font-size:0.8rem;">
+      ✉ ottawasinologysociety@gmail.com
+    </a>
+  </p>
   <p style="margin-top:0.6rem;font-size:0.68rem;"><span>仁　義　禮　智　信</span></p>
 </footer>
 
@@ -1181,7 +1235,7 @@ function renderEvents(lang) {
 
 var TRANSLATIONS = {
   zh: {
-    "nav-org":"渥太華漢學學會","nav-org-en":"Ottawa Sinology Society",
+    "nav-org":"渥太華漢學學會","nav-org-en":"",
     "nav-what":"何謂漢學","nav-wulun":"五倫","nav-tao":"因果","nav-datong":"大同","nav-jiao":"教化","nav-events":"活動",
     "hero-seal":"漢學","hero-subtitle":"聖賢智慧的長河　千年傳承的根脈",
     "hero-tagline":"天下之本在國，國之本在家，家之本在身。","scroll-hint":"↓ &nbsp; 向下探索",
@@ -1227,12 +1281,12 @@ var TRANSLATIONS = {
     "pillars-p":"老祖宗以一生體悟凝煉而成，歷千年而不衰的人生根本。",
     "p1":"愛人之心","p2":"正直之道","p3":"秩序之美","p4":"明辨之能","p5":"誠實之德",
     "pillars-closing":"漢學不是過去，她是當下；不是書本，她是生命。願每一位與老祖宗智慧相遇的人，都能找到回家的路。",
-    "footer-org":"渥太華漢學學會","footer-org-en":"Ottawa Sinology Society",
+    "footer-org":"渥太華漢學學會","footer-org-en":"",
     "footer-tagline":"弘揚中華文化　傳承聖賢教誨　共建大同世界",
     "ev-eyebrow":"學會活動","ev-h2":"活動與講座",
     "ev-intro":"渥太華漢學學會定期舉辦Zoom網上講座、研讀班及文化體驗活動，歡迎各界人士參與。"},
   en: {
-    "nav-org":"Ottawa Sinology Society","nav-org-en":"Ottawa Sinology Society",
+    "nav-org":"Ottawa Sinology Society","nav-org-en":"",
     "nav-what":"What is Sinology","nav-wulun":"Five Relations","nav-tao":"Karma","nav-datong":"Great Unity","nav-jiao":"Education","nav-events":"Events",
     "hero-seal":"漢學","hero-subtitle":"The River of Sages' Wisdom · A Heritage of Millennia",
     "hero-tagline":"The foundation of the world lies in the nation; of the nation in the family; of the family in the self.","scroll-hint":"↓ &nbsp; Explore",
@@ -1278,27 +1332,34 @@ var TRANSLATIONS = {
     "pillars-p":"Refined through lifetimes of lived experience — enduring truths that have withstood a thousand years.",
     "p1":"Benevolence","p2":"Righteousness","p3":"Propriety","p4":"Wisdom","p5":"Faithfulness",
     "pillars-closing":"Sinology is not the past — it is the present. It is not a book — it is life itself. May all who encounter this wisdom find the way home.",
-    "footer-org":"Ottawa Sinology Society","footer-org-en":"Ottawa Sinology Society",
+    "footer-org":"Ottawa Sinology Society","footer-org-en":"",
     "footer-tagline":"Promoting Chinese Culture · Transmitting Sagely Teachings · Building a World of Great Unity",
     "ev-eyebrow":"Society Events","ev-h2":"Events and Lectures",
-    "szj-eyebrow":"Three Character Classic · A Beacon in a Turbulent Age",
-    "szj-h2":"Why Study the Classics<br>of the Ancient Sages?",
-    "szj-p1":"Today's world is marked by moral decline, broken families, and social turmoil. Our ancestors distilled the remedy into the classics. The Three Character Classic opens: human nature is originally good. If people go astray, it is because of a lack of education. This is why we urgently need to return to the teachings of the sages.",
-    "szj-src1":"Three Character Classic · Opening","szj-v1":"At birth, people are by nature good.<br>Their natures are similar;<br>their habits make them different.",
-    "szj-src2":"Three Character Classic · Opening","szj-v2":"If they are not taught,<br>their nature will deteriorate.<br>The way of teaching<br>values focused dedication.",
-    "szj-src3":"Three Character Classic","szj-v3":"To feed without teaching<br>is the father's fault.<br>To teach without strictness<br>is the teacher's laziness.",
-    "szj-src4":"Three Character Classic","szj-v4":"For those who would learn,<br>there must be a beginning.<br>Complete the elementary learning,<br>then proceed to the Four Books.",
-    "szj-src5":"Three Character Classic","szj-v5":"Speak of benevolence, righteousness,<br>propriety, wisdom, and faithfulness —<br>these five constants<br>must not be violated.",
-    "szj-src6":"Three Character Classic","szj-v6":"Diligence brings achievement;<br>play brings no benefit.<br>Be warned and strive<br>with all your effort.",
-    "szj-src7":"Three Character Classic","szj-v7":"Jade unpolished cannot become a vessel.<br>A person unlearned cannot know the Way.",
-    "szj-closing":"Though written in lines of just three characters, every word of the Three Character Classic is a gem. In this turbulent age, returning to the classics is not nostalgia. It is coming home.",
     "nav-classics":"Classics",
     "ct-eyebrow":"Treasury of Classics",
     "ct-h2":"Gems from the Sagely Canons",
     "ct-intro":"The wisdom left by our ancestors is worth its weight in gold. Below are selected passages from Di Zi Gui, the Classic of Filial Piety, Taishang Ganying Pian, Liaofan's Four Lessons, and the Analects. May each reader savour them deeply.",
-    "ev-intro":"The Ottawa Sinology Society hosts Zoom classes, study groups, and cultural events. All are welcome."},
+    "ev-intro":"The Ottawa Sinology Society hosts Zoom classes, study groups, and cultural events. All are welcome.",
+    "nav-classics":"Classics",
+    "szj-eyebrow":"The Sagely Classics","szj-h2":"Why Study the Classics<br>of the Ancient Sages?",
+    "szj-p1":"Today the world faces moral decline, broken families, and social turmoil. Yet the answer has always existed in the sagely classics left by our ancestors. Spanning millennia, they point to one truth: human nature is originally good; education is the foundation; self-cultivation comes first.",
+    "szj-src1":"Three Character Classic","szj-v1":"At birth, people are by nature good.<br>Their natures are similar;<br>their habits make them different.",
+    "szj-src2":"Three Character Classic","szj-v2":"If they are not taught, their nature will deteriorate.<br>The way of teaching values focused dedication.",
+    "szj-src3":"Three Character Classic","szj-v3":"A person unlearned does not know righteousness.<br>As a child, in youth,<br>draw close to teachers and friends,<br>and practise ritual and conduct.",
+    "szj-src7":"Three Character Classic","szj-v7":"Jade unpolished cannot become a vessel.<br>A person unlearned cannot know the Way.",
+    "szj-src4":"Three Character Classic","szj-v4":"Confucius himself had teachers;<br>the ancient sages were all diligent learners.",
+    "szj-src-dzg":"Di Zi Gui opening lines, rooted in Analects Chapter I","szj-v-dzg":"Di Zi Gui, the sage teaching:<br>First filial piety and brotherhood,<br>then caution and faithfulness,<br>love all and draw near to the benevolent,<br>if energy remains, study the texts.",
+    "szj-src-lunyu1":"Analects, Chapter I","szj-v-lunyu1":"To learn and practise at the right time — is this not a joy?<br>To have friends come from afar — is this not a delight?<br>To be untroubled when others do not know you — is this not a noble person?",
+    "szj-src-lunyu2":"Analects, Chapter V","szj-v-lunyu2":"Eager to learn and not ashamed<br>to ask those below you.",
+    "szj-src-xjing":"Classic of Filial Piety, Chapter I","szj-v-xjing":"Filial piety is the root of all virtue,<br>and the source from which all teaching springs.",
+    "szj-src-daxue1":"The Great Learning","szj-v-daxue1":"The way of the Great Learning lies in manifesting bright virtue,<br>in renewing the people,<br>and in resting in the highest good.",
+    "szj-src-daxue2":"The Great Learning","szj-v-daxue2":"From the Son of Heaven down to the common people,<br>all must regard self-cultivation as the root of everything.",
+    "szj-src-zy":"The Doctrine of the Mean","szj-v-zy":"Study it extensively, inquire carefully,<br>think prudently, sift clearly,<br>and practise earnestly.",
+    "szj-src-mz1":"Mencius, Gaozi I","szj-v-mz1":"Benevolence is the human heart;<br>righteousness is the human path.<br>To abandon the path, to lose the heart<br>without seeking it — how sad!",
+    "szj-src-mz2":"Mencius, Gaozi I","szj-v-mz2":"The way of learning is none other<br>than to seek the lost heart.",
+    "szj-closing":"The sagely classics are the crystallisation of a thousand years of civilisation. Seven classics, one truth: human nature is originally good; we study to restore that goodness; we act to manifest it. This is the heart of sagely education and the mission of sinology." },
   fr: {
-    "nav-org":"Société de Sinologie d'Ottawa","nav-org-en":"Ottawa Sinology Society",
+    "nav-org":"Société de Sinologie d'Ottawa","nav-org-en":"",
     "nav-what":"La Sinologie","nav-wulun":"Cinq Relations","nav-tao":"Karma","nav-datong":"Grande Unité","nav-jiao":"Éducation","nav-events":"Événements",
     "hero-seal":"漢學","hero-subtitle":"Le fleuve de la sagesse · Un héritage millénaire",
     "hero-tagline":"Le fondement du monde est la nation; celui de la nation est la famille; celui de la famille est l'individu.","scroll-hint":"↓ &nbsp; Explorer",
@@ -1344,25 +1405,32 @@ var TRANSLATIONS = {
     "pillars-p":"Raffinées à travers des vies d'expérience — des vérités durables qui ont résisté à mille ans.",
     "p1":"Bienveillance","p2":"Droiture","p3":"Bienséance","p4":"Sagesse","p5":"Fidélité",
     "pillars-closing":"La sinologie n'est pas le passé — c'est le présent. Ce n'est pas un livre — c'est la vie elle-même.",
-    "footer-org":"Société de Sinologie d'Ottawa","footer-org-en":"Ottawa Sinology Society",
+    "footer-org":"Société de Sinologie d'Ottawa","footer-org-en":"",
     "footer-tagline":"Promouvoir la culture chinoise · Transmettre les enseignements des sages · Construire un monde de Grande Unité",
     "ev-eyebrow":"Activités de la Société","ev-h2":"Événements et Conférences",
-    "szj-eyebrow":"Classique des trois caractères · Un phare en temps de troubles",
-    "szj-h2":"Pourquoi étudier les classiques<br>des sages anciens ?",
-    "szj-p1":"Le monde d'aujourd'hui est marqué par le déclin moral et les troubles sociaux. Nos ancêtres ont distillé le remède dans les classiques. Le Classique des trois caractères s'ouvre sur une vérité fondamentale : la nature humaine est foncièrement bonne. Si les gens s'égarent, c'est par manque d'éducation.",
-    "szj-src1":"Classique des trois caractères · Ouverture","szj-v1":"À la naissance, les gens sont<br>par nature bons.<br>Leurs natures sont similaires ;<br>leurs habitudes les différencient.",
-    "szj-src2":"Classique des trois caractères · Ouverture","szj-v2":"Sans enseignement,<br>la nature se détériore.<br>La voie de l'enseignement<br>valorise la dévotion concentrée.",
-    "szj-src3":"Classique des trois caractères","szj-v3":"Nourrir sans enseigner<br>est la faute du père.<br>Enseigner sans rigueur<br>est la paresse du maître.",
-    "szj-src4":"Classique des trois caractères","szj-v4":"Pour celui qui veut apprendre,<br>il doit y avoir un début.<br>Terminez l'apprentissage élémentaire,<br>puis passez aux Quatre Livres.",
-    "szj-src5":"Classique des trois caractères","szj-v5":"Parlez de bienveillance, droiture,<br>bienséance, sagesse et fidélité —<br>ces cinq constantes<br>ne doivent pas être violées.",
-    "szj-src6":"Classique des trois caractères","szj-v6":"La diligence apporte la réussite ;<br>le jeu n'apporte rien.<br>Soyez averti et efforcez-vous<br>de tout votre effort.",
-    "szj-src7":"Classique des trois caractères","szj-v7":"Le jade non taillé ne peut devenir un objet précieux.<br>Un homme sans étude ne peut connaître la Voie.",
-    "szj-closing":"Bien qu'écrit en lignes de seulement trois caractères, chaque mot est un joyau. En ce temps de troubles, retourner aux classiques n'est pas de la nostalgie. C'est rentrer à la maison.",
     "nav-classics":"Classiques",
     "ct-eyebrow":"Trésor des classiques",
     "ct-h2":"Joyaux des canons des sages",
     "ct-intro":"La sagesse laissée par nos ancêtres vaut son pesant d'or. Voici des passages choisis du Di Zi Gui, du Classique de la piété filiale, du Taishang Ganying Pian, des Quatre Leçons de Liaofan et des Entretiens. Que chaque lecteur les savoure profondément.",
-    "ev-intro":"La Société de Sinologie d'Ottawa organise des cours Zoom, groupes d'étude et activités culturelles. Tous sont les bienvenus."}
+    "ev-intro":"La Société de Sinologie d'Ottawa organise des cours Zoom, groupes d'étude et activités culturelles. Tous sont les bienvenus.",
+    "nav-classics":"Classiques",
+    "szj-eyebrow":"Les classiques des sages","szj-h2":"Pourquoi étudier les classiques<br>des sages anciens ?",
+    "szj-p1":"Le monde connaît aujourd'hui le déclin moral, les familles brisées et les troubles sociaux. Pourtant la réponse a toujours existé dans les classiques des sages. Ces textes traversent les millénaires et pointent vers une seule vérité : la nature humaine est foncièrement bonne ; l'éducation est le fondement ; la culture de soi passe en premier.",
+    "szj-src1":"Classique des trois caractères","szj-v1":"À la naissance, les gens sont par nature bons.<br>Leurs natures sont similaires ;<br>leurs habitudes les différencient.",
+    "szj-src2":"Classique des trois caractères","szj-v2":"Sans enseignement, la nature se détériore.<br>La voie de l'enseignement valorise la dévotion concentrée.",
+    "szj-src3":"Classique des trois caractères","szj-v3":"Sans étude, on ne connaît pas la justice.<br>Enfant, dès le jeune âge,<br>approche-toi des maîtres et amis,<br>et pratique les rites et la conduite.",
+    "szj-src7":"Classique des trois caractères","szj-v7":"Le jade non taillé ne peut devenir un objet précieux.<br>Un homme sans étude ne peut connaître la Voie.",
+    "szj-src4":"Classique des trois caractères","szj-v4":"Confucius lui-même avait des maîtres ;<br>les sages anciens étaient tous des apprenants diligents.",
+    "szj-src-dzg":"Di Zi Gui premières lignes, issues des Entretiens Chapitre I","szj-v-dzg":"Di Zi Gui, l'enseignement du sage :<br>D'abord piété filiale et fraternité,<br>puis prudence et fidélité,<br>aimer tous et se rapprocher des bienveillants,<br>si l'énergie reste, étudier les textes.",
+    "szj-src-lunyu1":"Entretiens, Chapitre I","szj-v-lunyu1":"Apprendre et pratiquer au bon moment — n'est-ce pas une joie ?<br>Avoir des amis qui viennent de loin — n'est-ce pas un délice ?<br>Ne pas être troublé quand les autres ne vous connaissent pas — n'est-ce pas noble ?",
+    "szj-src-lunyu2":"Entretiens, Chapitre V","szj-v-lunyu2":"Désireux d'apprendre et non honteux<br>d'interroger ceux qui sont au-dessous de vous.",
+    "szj-src-xjing":"Classique de la piété filiale, Chapitre I","szj-v-xjing":"La piété filiale est la racine de toute vertu,<br>et la source dont jaillit tout enseignement.",
+    "szj-src-daxue1":"La Grande Étude","szj-v-daxue1":"La voie de la Grande Étude consiste à manifester la vertu lumineuse,<br>à renouveler le peuple,<br>et à se reposer dans le bien suprême.",
+    "szj-src-daxue2":"La Grande Étude","szj-v-daxue2":"Du Fils du Ciel jusqu'aux gens du commun,<br>tous doivent considérer la culture de soi comme la racine de tout.",
+    "szj-src-zy":"Doctrine du Juste Milieu","szj-v-zy":"Étudiez de manière approfondie, interrogez-vous soigneusement,<br>réfléchissez prudemment, discernez clairement,<br>et pratiquez sincèrement.",
+    "szj-src-mz1":"Mencius, Gaozi I","szj-v-mz1":"La bienveillance est le coeur humain ;<br>la droiture est la voie humaine.<br>Abandonner la voie, perdre le coeur<br>sans le chercher — quelle tristesse !",
+    "szj-src-mz2":"Mencius, Gaozi I","szj-v-mz2":"La voie de l'apprentissage n'est autre<br>que chercher le coeur perdu.",
+    "szj-closing":"Les classiques sont la cristallisation de mille ans de civilisation. Sept classiques, une vérité : la nature humaine est foncièrement bonne ; nous étudions pour restaurer cette bonté ; nous agissons pour la manifester. C'est le coeur de l'éducation des sages et la mission de la sinologie." }
 };
 
 var currentLang = 'zh';
