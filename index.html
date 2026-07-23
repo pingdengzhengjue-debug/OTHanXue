@@ -535,6 +535,165 @@ footer span{color:var(--vermilion);}
 .szj-source { font-size: 0.65rem; letter-spacing: 0.3em; color: var(--vermilion); display: block; margin-bottom: 0.7rem; }
 .szj-closing { max-width: 680px; margin: 3rem auto 0; text-align: center; font-size: 1rem; color: #3a2f25; line-height: 2; border-top: 1px solid rgba(26,20,16,0.1); padding-top: 2rem; }
 
+
+/* ── MINI CALENDAR ── */
+.mini-cal {
+  max-width: 320px;
+  margin: 2rem auto 1rem;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(184,134,11,0.25);
+  padding: 1.2rem;
+}
+.mini-cal-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.mini-cal-month {
+  font-size: 0.85rem;
+  letter-spacing: 0.25em;
+  color: var(--gold);
+  font-weight: 600;
+}
+.mini-cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 3px;
+  text-align: center;
+}
+.mini-cal-day-name {
+  font-size: 0.62rem;
+  color: rgba(245,240,232,0.4);
+  letter-spacing: 0.05em;
+  padding: 4px 0;
+}
+.mini-cal-cell {
+  font-size: 0.75rem;
+  color: rgba(245,240,232,0.6);
+  padding: 5px 2px;
+  border-radius: 2px;
+}
+.mini-cal-cell.empty { background: none; }
+.mini-cal-cell.cal-saturday {
+  color: var(--vermilion);
+  font-weight: 700;
+  background: rgba(192,57,43,0.15);
+  border-radius: 50%;
+}
+.mini-cal-cell.cal-today {
+  background: var(--gold);
+  color: var(--ink);
+  font-weight: 900;
+  border-radius: 50%;
+}
+.mini-cal-cell.cal-saturday.cal-today {
+  background: var(--vermilion);
+  color: white;
+}
+
+
+/* ── FOOTER BAND ── */
+.footer-band {
+  background: #111007;
+  border-top: 1px solid rgba(184,134,11,0.2);
+  padding: 3rem 2rem;
+}
+.footer-band-inner {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.footer-band-title {
+  font-size: 0.7rem;
+  letter-spacing: 0.4em;
+  color: var(--gold);
+  margin-bottom: 1.2rem;
+  text-transform: uppercase;
+}
+/* Calendar side */
+.footer-band-cal { flex: 0 0 auto; }
+.footer-cal-note {
+  font-size: 0.65rem;
+  color: rgba(245,240,232,0.35);
+  letter-spacing: 0.1em;
+  margin-top: 0.8rem;
+  text-align: center;
+}
+/* Contact side */
+.footer-band-contact { flex: 1; min-width: 240px; }
+.footer-contact-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+.footer-org-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: rgba(245,240,232,0.85);
+}
+.footer-org-sub {
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  color: rgba(245,240,232,0.35);
+  margin-top: 0.3rem;
+}
+.footer-email {
+  display: block;
+  color: var(--gold);
+  text-decoration: none;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  margin-bottom: 1.2rem;
+  transition: opacity 0.2s;
+}
+.footer-email:hover { opacity: 0.75; }
+.footer-zoom {
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding-top: 1rem;
+}
+.footer-zoom-row {
+  font-size: 0.78rem;
+  color: rgba(245,240,232,0.6);
+  letter-spacing: 0.08em;
+  margin-bottom: 0.4rem;
+}
+.footer-zoom-row strong {
+  color: rgba(245,240,232,0.9);
+  margin-left: 0.3rem;
+}
+/* Override mini-cal colors for footer (dark bg) */
+.footer-band .mini-cal {
+  background: rgba(255,255,255,0.03);
+  border-color: rgba(184,134,11,0.2);
+}
+.footer-band .mini-cal-cell {
+  color: rgba(245,240,232,0.55);
+}
+
+
+/* ── FOOTER BAND ── */
+.footer-band { background: #111007; border-top: 1px solid rgba(184,134,11,0.2); padding: 3rem 2rem; }
+.footer-band-inner { max-width: 860px; margin: 0 auto; display: flex; gap: 4rem; align-items: flex-start; flex-wrap: wrap; justify-content: center; }
+.footer-band-title { font-size: 0.7rem; letter-spacing: 0.4em; color: var(--gold); margin-bottom: 1.2rem; text-transform: uppercase; }
+.footer-band-cal { flex: 0 0 auto; }
+.footer-cal-note { font-size: 0.65rem; color: rgba(245,240,232,0.35); letter-spacing: 0.1em; margin-top: 0.8rem; text-align: center; }
+.footer-band-contact { flex: 1; min-width: 240px; }
+.footer-contact-logo { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1.2rem; }
+.footer-org-name { font-size: 0.95rem; font-weight: 600; letter-spacing: 0.2em; color: rgba(245,240,232,0.85); }
+.footer-org-sub { font-size: 0.65rem; letter-spacing: 0.15em; color: rgba(245,240,232,0.35); margin-top: 0.3rem; }
+.footer-email { display: block; color: var(--gold); text-decoration: none; font-size: 0.78rem; letter-spacing: 0.12em; margin-bottom: 1.2rem; transition: opacity 0.2s; }
+.footer-email:hover { opacity: 0.75; }
+.footer-zoom { border-top: 1px solid rgba(255,255,255,0.06); padding-top: 1rem; }
+.footer-zoom-row { font-size: 0.78rem; color: rgba(245,240,232,0.6); letter-spacing: 0.08em; margin-bottom: 0.4rem; }
+.footer-zoom-row strong { color: rgba(245,240,232,0.9); margin-left: 0.3rem; }
+.footer-band .mini-cal { background: rgba(255,255,255,0.03); border-color: rgba(184,134,11,0.2); }
+.footer-band .mini-cal-cell { color: rgba(245,240,232,0.55); }
+
 @media(max-width:600px){.nav-links{display:none;}.tao-step+.tao-step::before{display:none;}.big-char::after{display:none;}}
 </style>
 </head>
@@ -1136,27 +1295,40 @@ footer span{color:var(--vermilion);}
 </section>
 
 <!-- FOOTER -->
-<footer>
-  <div class="footer-logo">
-    <svg width="48" height="48" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="26" cy="26" r="23" fill="none" stroke="#b8860b" stroke-width="1.5"/>
-      <circle cx="26" cy="26" r="18" fill="none" stroke="#b8860b" stroke-width="0.6" opacity="0.4"/>
-      <text x="26" y="33" font-size="21" fill="#b8860b" text-anchor="middle" font-family="serif" font-weight="bold">漢</text>
-      <path d="M26,4 L27.6,8 L30,5.5 L28.8,9.5 L33,9 L29.8,11.5 L31.5,14.5 L26,12.5 L20.5,14.5 L22.2,11.5 L19,9 L23.2,9.5 L22,5.5 L24.4,8 Z" fill="#c0392b" opacity="0.9" transform="scale(0.6) translate(17,0)"/>
-    </svg>
-    <div class="footer-name">
-      <div class="footer-name-zh" data-i18n="footer-org">渥太華漢學學會</div>
-      <div class="footer-name-en" data-i18n="footer-org-en">Ottawa Sinology Society</div>
+<!-- FOOTER BAND: Calendar + Contact -->
+<div class="footer-band">
+  <div class="footer-band-inner">
+    <div class="footer-band-cal">
+      <div class="footer-band-title" data-i18n="footer-cal-title">本月行事曆</div>
+      <div id="footer-calendar"></div>
+      <div class="footer-cal-note" data-i18n="footer-cal-note">🔴 每週六上課　🟡 今天</div>
+    </div>
+    <div class="footer-band-contact">
+      <div class="footer-band-title" data-i18n="footer-contact-title">聯絡我們</div>
+      <div class="footer-contact-logo">
+        <svg width="44" height="44" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="26" cy="26" r="23" fill="none" stroke="#b8860b" stroke-width="1.5"/>
+          <circle cx="26" cy="26" r="18" fill="none" stroke="#b8860b" stroke-width="0.6" opacity="0.4"/>
+          <text x="26" y="33" font-size="21" fill="#b8860b" text-anchor="middle" font-family="serif" font-weight="bold">漢</text>
+          <path d="M26,4 L27.6,8 L30,5.5 L28.8,9.5 L33,9 L29.8,11.5 L31.5,14.5 L26,12.5 L20.5,14.5 L22.2,11.5 L19,9 L23.2,9.5 L22,5.5 L24.4,8 Z" fill="#c0392b" opacity="0.9" transform="scale(0.6) translate(17,0)"/>
+        </svg>
+        <div>
+          <div class="footer-org-name" data-i18n="footer-org">渥太華漢學學會</div>
+          <div class="footer-org-sub" data-i18n="footer-tagline-short">弘揚中華文化　傳承聖賢教誨</div>
+        </div>
+      </div>
+      <a href="mailto:ottawasinologysociety@gmail.com" class="footer-email">✉ ottawasinologysociety@gmail.com</a>
+      <div class="footer-zoom">
+        <div class="footer-zoom-row">📹 <span data-i18n="footer-zoom-id">Zoom 會議號：</span><strong>290 056 6095</strong></div>
+        <div class="footer-zoom-row">🔑 <span data-i18n="footer-zoom-pw">密碼：</span><strong>BBh4q0</strong></div>
+      </div>
     </div>
   </div>
+</div>
+
+<footer>
   <p data-i18n="footer-tagline">弘揚中華文化　傳承聖賢教誨　共建大同世界</p>
-  <p style="margin-top:0.8rem;">
-    <a href="mailto:ottawasinologysociety@gmail.com"
-       style="color:var(--gold);text-decoration:none;letter-spacing:0.15em;font-size:0.8rem;">
-      ✉ ottawasinologysociety@gmail.com
-    </a>
-  </p>
-  <p style="margin-top:0.6rem;font-size:0.68rem;"><span>仁　義　禮　智　信</span></p>
+  <p style="margin-top:0.5rem;font-size:0.68rem;"><span>仁　義　禮　智　信　孝</span></p>
 </footer>
 
 <script>
@@ -1169,15 +1341,15 @@ footer span{color:var(--vermilion);}
    ============================================================ */
 const EVENTS = [
   {
-    day: "05",
-    month_zh: "七月", month_en: "Jul", month_fr: "Juil",
+    day: "",
+    month_zh: "", month_en: "", month_fr: "",
     tag_zh: "網上講座", tag_en: "Online Lecture", tag_fr: "Cours en ligne",
-    title_zh: "弟子規精讀班——做人的根本規範",
-    title_en: "Study of Di Zi Gui — Foundational Rules for Being Human",
-    title_fr: "Étude du Di Zi Gui — Les règles fondamentales de la conduite humaine",
-    time_zh: "下午 7:00 – 9:00（東部時間）",
-    time_en: "7:00 PM – 9:00 PM (Eastern Time)",
-    time_fr: "19h00 – 21h00 (Heure de l'Est)",
+    title_zh: "蔡禮旭老師：幸福人生講座·細講《弟子規》",
+    title_en: "Teacher Cai Lixu: Lectures on a Happy Life — A Detailed Study of Di Zi Gui",
+    title_fr: "Professeur Cai Lixu : Conférences sur une vie heureuse — Étude détaillée du Di Zi Gui",
+    time_zh: "每週六 晚上 9:30 – 10:00（加拿大東部時間）",
+    time_en: "Every Saturday 9:30 PM – 10:00 PM (Eastern Time, Canada)",
+    time_fr: "Chaque samedi 21h30 – 22h00 (Heure de l'Est, Canada)",
     loc_zh: "Zoom 網上課堂",
     loc_en: "Zoom Online",
     loc_fr: "Zoom en ligne",
@@ -1193,6 +1365,90 @@ const EVENTS = [
   /* ── 新增活動請複製上面的區塊貼在這裡 · ADD NEW EVENTS HERE ── */
 ];
 
+
+/* ── Auto Date & Calendar Helpers ── */
+function getNextSaturday() {
+  var now = new Date();
+  var day = now.getDay(); // 0=Sun, 6=Sat
+  var diff = (6 - day + 7) % 7;
+  if (diff === 0) diff = 0; // today is Saturday
+  var next = new Date(now);
+  next.setDate(now.getDate() + diff);
+  return next;
+}
+
+function getDayNum(date) {
+  return date.getDate();
+}
+
+function getMonthLabel(date, lang) {
+  var months = {
+    zh: ['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'],
+    en: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+    fr: ['Jan','Fév','Mar','Avr','Mai','Jun','Juil','Aoû','Sep','Oct','Nov','Déc']
+  };
+  return months[lang][date.getMonth()];
+}
+
+function buildMiniCalendar(lang) {
+  var now = new Date();
+  var year = now.getFullYear();
+  var month = now.getMonth();
+
+  var monthNames = {
+    zh: ['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'],
+    en: ['January','February','March','April','May','June','July','August','September','October','November','December'],
+    fr: ['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre']
+  };
+  var dayNames = {
+    zh: ['日','一','二','三','四','五','六'],
+    en: ['Su','Mo','Tu','We','Th','Fr','Sa'],
+    fr: ['Di','Lu','Ma','Me','Je','Ve','Sa']
+  };
+
+  var firstDay = new Date(year, month, 1).getDay();
+  var daysInMonth = new Date(year, month + 1, 0).getDate();
+  var today = now.getDate();
+
+  // Find all Saturdays
+  var saturdays = [];
+  for (var d = 1; d <= daysInMonth; d++) {
+    var wd = new Date(year, month, d).getDay();
+    if (wd === 6) saturdays.push(d);
+  }
+
+  var html = '<div class="mini-cal">';
+  html += '<div class="mini-cal-header">';
+  html += '<span class="mini-cal-month">' + monthNames[lang][month] + ' ' + year + '</span>';
+  html += '</div>';
+  html += '<div class="mini-cal-grid">';
+
+  // Day headers
+  for (var i = 0; i < 7; i++) {
+    html += '<div class="mini-cal-day-name">' + dayNames[lang][i] + '</div>';
+  }
+
+  // Empty cells before first day
+  for (var i = 0; i < firstDay; i++) {
+    html += '<div class="mini-cal-cell empty"></div>';
+  }
+
+  // Day cells
+  for (var d = 1; d <= daysInMonth; d++) {
+    var isSat = saturdays.indexOf(d) >= 0;
+    var isToday = d === today;
+    var cls = 'mini-cal-cell';
+    if (isSat) cls += ' cal-saturday';
+    if (isToday) cls += ' cal-today';
+    html += '<div class="' + cls + '">' + d + '</div>';
+  }
+
+  html += '</div>'; // grid
+  html += '</div>'; // mini-cal
+  return html;
+}
+
+
 function renderEvents(lang) {
   var upcoming = [];
   var past = [];
@@ -1202,6 +1458,14 @@ function renderEvents(lang) {
   }
 
   function buildCard(e) {
+    // Auto-calculate next Saturday if no fixed date
+    if (!e.day || e.day === '') {
+      var sat = getNextSaturday();
+      e.day = getDayNum(sat).toString();
+      e['month_zh'] = getMonthLabel(sat, 'zh');
+      e['month_en'] = getMonthLabel(sat, 'en');
+      e['month_fr'] = getMonthLabel(sat, 'fr');
+    }
     var pastLabels = {zh:'已完成', en:'Completed', fr:'Terminé'};
     var badge = e.past ? '<span class="event-badge-past">' + pastLabels[lang] + '</span>' : '';
 
@@ -1296,7 +1560,7 @@ var TRANSLATIONS = {
     "pillars-p":"老祖宗以一生體悟凝煉而成，歷千年而不衰的人生根本。",
     "p1":"愛人之心","p2":"正直之道","p3":"秩序之美","p4":"明辨之能","p5":"誠實之德",
     "pillars-closing":"漢學不是過去，她是當下；不是書本，她是生命。願每一位與老祖宗智慧相遇的人，都能找到回家的路。",
-    "footer-org":"渥太華漢學學會","footer-org-en":"",
+    "footer-org":"渥太華漢學學會","footer-org-en":"","footer-cal-title":"本月行事曆","footer-cal-note":"🔴 每週六上課　🟡 今天","footer-contact-title":"聯絡我們","footer-tagline-short":"弘揚中華文化　傳承聖賢教誨","footer-zoom-id":"Zoom 會議號：","footer-zoom-pw":"密碼：","footer-cal-title":"本月行事曆","footer-cal-note":"🔴 每週六上課　🟡 今天","footer-contact-title":"聯絡我們","footer-tagline-short":"弘揚中華文化　傳承聖賢教誨","footer-zoom-id":"Zoom 會議號：","footer-zoom-pw":"密碼：",
     "footer-tagline":"弘揚中華文化　傳承聖賢教誨　共建大同世界",
     "ev-eyebrow":"學會活動","ev-h2":"活動與講座",
     "ev-intro":"渥太華漢學學會定期舉辦Zoom網上講座、研讀班及文化體驗活動，歡迎各界人士參與。"},
@@ -1347,7 +1611,7 @@ var TRANSLATIONS = {
     "pillars-p":"Refined through lifetimes of lived experience — enduring truths that have withstood a thousand years.",
     "p1":"Benevolence","p2":"Righteousness","p3":"Propriety","p4":"Wisdom","p5":"Faithfulness",
     "pillars-closing":"Sinology is not the past — it is the present. It is not a book — it is life itself. May all who encounter this wisdom find the way home.",
-    "footer-org":"Ottawa Sinology Society","footer-org-en":"",
+    "footer-org":"Ottawa Sinology Society","footer-org-en":"","footer-cal-title":"Monthly Calendar","footer-cal-note":"🔴 Every Saturday class　🟡 Today","footer-contact-title":"Contact Us","footer-tagline-short":"Promoting Chinese Culture · Transmitting Sagely Teachings","footer-zoom-id":"Zoom Meeting ID:","footer-zoom-pw":"Passcode:","footer-cal-title":"Monthly Calendar","footer-cal-note":"🔴 Every Saturday · Class day　🟡 Today","footer-contact-title":"Contact Us","footer-tagline-short":"Promoting Chinese Culture · Transmitting Sagely Teachings","footer-zoom-id":"Zoom Meeting ID:","footer-zoom-pw":"Passcode:",
     "footer-tagline":"Promoting Chinese Culture · Transmitting Sagely Teachings · Building a World of Great Unity",
     "ev-eyebrow":"Society Events","ev-h2":"Events and Lectures",
     "nav-classics":"Why Study","nav-anthology":"Anthology",
@@ -1420,7 +1684,7 @@ var TRANSLATIONS = {
     "pillars-p":"Raffinées à travers des vies d'expérience — des vérités durables qui ont résisté à mille ans.",
     "p1":"Bienveillance","p2":"Droiture","p3":"Bienséance","p4":"Sagesse","p5":"Fidélité",
     "pillars-closing":"La sinologie n'est pas le passé — c'est le présent. Ce n'est pas un livre — c'est la vie elle-même.",
-    "footer-org":"Société de Sinologie d'Ottawa","footer-org-en":"",
+    "footer-org":"Société de Sinologie d'Ottawa","footer-org-en":"","footer-cal-title":"Calendrier du mois","footer-cal-note":"🔴 Chaque samedi cours　🟡 Aujourd'hui","footer-contact-title":"Nous contacter","footer-tagline-short":"Promouvoir la culture chinoise · Transmettre les enseignements des sages","footer-zoom-id":"ID Zoom :","footer-zoom-pw":"Code d'accès :","footer-cal-title":"Calendrier du mois","footer-cal-note":"🔴 Chaque samedi · Cours　🟡 Aujourd'hui","footer-contact-title":"Nous contacter","footer-tagline-short":"Promouvoir la culture chinoise · Transmettre les enseignements des sages","footer-zoom-id":"ID Zoom :","footer-zoom-pw":"Code d'accès :",
     "footer-tagline":"Promouvoir la culture chinoise · Transmettre les enseignements des sages · Construire un monde de Grande Unité",
     "ev-eyebrow":"Activités de la Société","ev-h2":"Événements et Conférences",
     "nav-classics":"Pourquoi étudier","nav-anthology":"Anthologie",
@@ -1452,7 +1716,14 @@ var currentLang = 'zh';
 
 document.addEventListener('DOMContentLoaded', function() {
   renderEvents('zh');
+  renderFooterCalendar('zh');
 });
+
+function renderFooterCalendar(lang) {
+  var calEl = document.getElementById('footer-calendar');
+  if (calEl) { calEl.innerHTML = buildMiniCalendar(lang); }
+}
+
 
 function switchTab(tabId, btn) {
   var panels = document.querySelectorAll('.events-tab-panel');
@@ -1474,6 +1745,7 @@ function setLang(lang) {
     if (t[key] !== undefined) { els[i].innerHTML = t[key]; }
   }
   renderEvents(lang);
+  renderFooterCalendar(lang);
   var btns = document.querySelectorAll('.lang-btn');
   for (var i = 0; i < btns.length; i++) { btns[i].classList.remove('active'); }
   event.target.classList.add('active');
