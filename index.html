@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>渥太華漢學學會</title>
+<title>渥太華中華傳統智慧小院</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;600;900&family=Noto+Serif:wght@300;400;600;900&family=Noto+Serif+Display:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
@@ -694,6 +694,34 @@ footer span{color:var(--vermilion);}
 .footer-band .mini-cal { background: rgba(255,255,255,0.03); border-color: rgba(184,134,11,0.2); }
 .footer-band .mini-cal-cell { color: rgba(245,240,232,0.55); }
 
+
+/* ── OPENING STATEMENT ── */
+.opening-statement {
+  border-left: 3px solid var(--vermilion);
+  padding: 1.8rem 2rem;
+  background: rgba(192,57,43,0.04);
+  margin-bottom: 2.5rem;
+  border-radius: 0 4px 4px 0;
+}
+.opening-statement p {
+  font-size: 1.02rem;
+  line-height: 2;
+  color: #2a1f12;
+  margin-bottom: 1.2rem;
+  position: relative;
+}
+.opening-statement p:last-child { margin-bottom: 0; }
+.opening-statement p:first-child::before {
+  content: '❝';
+  font-size: 2.5rem;
+  color: var(--vermilion);
+  opacity: 0.35;
+  position: absolute;
+  top: -0.8rem;
+  left: -1.5rem;
+  font-family: serif;
+}
+
 @media(max-width:600px){.nav-links{display:none;}.tao-step+.tao-step::before{display:none;}.big-char::after{display:none;}}
 </style>
 </head>
@@ -707,8 +735,8 @@ footer span{color:var(--vermilion);}
       <circle cx="18" cy="18" r="12" fill="none" stroke="#b8860b" stroke-width="0.5" opacity="0.4"/>
       <text x="18" y="24" font-size="15" fill="#b8860b" text-anchor="middle" font-family="serif" font-weight="bold">漢</text>
       <path d="M18,3 L19.4,6.5 L21,4.5 L20,8 L23,7.5 L20.8,9.5 L22.5,12 L18,10.5 L13.5,12 L15.2,9.5 L13,7.5 L16,8 L15,4.5 L16.6,6.5 Z" fill="#c0392b" opacity="0.9" transform="scale(0.5) translate(17.5,0)"/>
-      <text x="42" y="13" font-size="10.5" fill="rgba(245,240,232,0.75)" font-family="serif" letter-spacing="1" data-i18n="nav-org">渥太華漢學學會</text>
-      <text x="42" y="28" font-size="8.5" fill="#b8860b" font-family="serif" letter-spacing="1.5" data-i18n="nav-org-en">Ottawa Sinology Society</text>
+      <text x="42" y="13" font-size="10.5" fill="rgba(245,240,232,0.75)" font-family="serif" letter-spacing="1" data-i18n="nav-org">渥太華中華傳統智慧小院</text>
+      <text x="42" y="28" font-size="8.5" fill="#b8860b" font-family="serif" letter-spacing="1.5" data-i18n="nav-org-en">Ottawa Chinese Traditional Wisdom Courtyard</text>
     </svg>
   </div>
   <ul class="nav-links">
@@ -759,6 +787,14 @@ footer span{color:var(--vermilion);}
   <div class="container">
     <div class="eyebrow" data-i18n="what-eyebrow">何謂漢學</div>
     <h2 data-i18n="what-h2">老祖宗留下的<br>生命智慧寶藏</h2>
+    <!-- Opening statement -->
+    <div class="opening-statement">
+      <p data-i18n="opening-p1">在當今這個急功近利、道德淪喪的時代，我們的孩子從小被灌輸的，是分數、競爭、名利；卻鮮少有人告訴他們：做一個好人，才是人生最重要的功課。</p>
+      <p data-i18n="opening-p2">德行，是一切成就的根基。一個有仁義、有誠信、有孝道的人，無論從事什麼職業——醫生、律師、商人、教師——都能做出正確的選擇，對家庭、對社會、對國家都是一股正面的力量。反之，一個才華橫溢卻缺乏德行的人，其才能愈大，帶來的危害也愈大。</p>
+      <p data-i18n="opening-p3">老祖宗早已看透這個道理。他們留下的儒家經典、孝經、弟子規、了凡四訓，不是古董，而是一套經過千年驗證的生命教育體系。這套智慧教導我們如何待人、如何處世、如何在面對誘惑與困境時，依然保持一顆清明正直的心。</p>
+      <p data-i18n="opening-p4">渥太華中華傳統智慧小院，正是為此而設——讓身處海外的華人子弟，乃至所有對中華文化有興趣的人，都能接觸到這份珍貴的智慧傳承，為下一代種下德行的種子，讓他們在任何時代、任何環境下，都能做出無愧於心的選擇。</p>
+    </div>
+
     <p data-i18n="what-p1">漢學，廣義而言是對中國語言、歷史、哲學、文學與禮制的系統性研究；狹義而言，則是儒、釋、道三家思想相互融通、千年沉澱而成的生命教育體系。她不是博物館裏的古物，而是每一個當下依然呼吸著的活智慧。</p>
     <p data-i18n="what-p2">我們的老祖宗以文字為器，以禮樂為道，將宇宙人生的真理凝煉於一部部典籍之中。四書五經、諸子百家，每一字皆是無數聖賢以生命換來的體悟。學漢學，就是回到生命的源頭，重新認識「我是誰、從哪裏來、往哪裏去」。</p>
     <div class="definition-box">
@@ -1214,7 +1250,7 @@ footer span{color:var(--vermilion);}
     <div class="eyebrow" data-i18n="ev-eyebrow">學會活動</div>
     <h2 data-i18n="ev-h2">活動與講座</h2>
     <p style="color:rgba(245,240,232,0.65);max-width:600px;margin:0 auto;" data-i18n="ev-intro">
-      渥太華漢學學會定期舉辦講座、研讀班、傳統節慶及文化體驗活動，歡迎各界人士參與。
+      渥太華中華傳統智慧小院定期舉辦講座、研讀班、傳統節慶及文化體驗活動，歡迎各界人士參與。
     </p>
 
     
@@ -1313,7 +1349,7 @@ footer span{color:var(--vermilion);}
           <path d="M26,4 L27.6,8 L30,5.5 L28.8,9.5 L33,9 L29.8,11.5 L31.5,14.5 L26,12.5 L20.5,14.5 L22.2,11.5 L19,9 L23.2,9.5 L22,5.5 L24.4,8 Z" fill="#c0392b" opacity="0.9" transform="scale(0.6) translate(17,0)"/>
         </svg>
         <div>
-          <div class="footer-org-name" data-i18n="footer-org">渥太華漢學學會</div>
+          <div class="footer-org-name" data-i18n="footer-org">渥太華中華傳統智慧小院</div>
           <div class="footer-org-sub" data-i18n="footer-tagline-short">弘揚中華文化　傳承聖賢教誨</div>
         </div>
       </div>
@@ -1514,13 +1550,17 @@ function renderEvents(lang) {
 
 var TRANSLATIONS = {
   zh: {
-    "nav-org":"渥太華漢學學會","nav-org-en":"",
+    "nav-org":"渥太華中華傳統智慧小院","nav-org-en":"",
     "nav-what":"何謂漢學","nav-wulun":"五倫","nav-tao":"因果","nav-datong":"大同","nav-jiao":"教化","nav-events":"活動","nav-contact":"聯絡我們",
     "hero-seal":"漢學","hero-subtitle":"聖賢智慧的長河　千年傳承的根脈",
     "hero-tagline":"天下之本在國，國之本在家，家之本在身。","scroll-hint":"↓ &nbsp; 向下探索",
     "conf-caption":"至聖先師　孔子（公元前551—479年）","conf-sub":"萬世師表　· 中華文化之魂",
     "conf-quote":"吾日三省吾身：為人謀而不忠乎？<br>與朋友交而不信乎？傳不習乎？","conf-source":"《論語 · 學而篇》",
-    "what-eyebrow":"何謂漢學","what-h2":"老祖宗留下的<br>生命智慧寶藏",
+    "what-eyebrow":"何謂漢學",
+    "opening-p1":"在當今這個急功近利、道德淪喪的時代，我們的孩子從小被灌輸的，是分數、競爭、名利；卻鮮少有人告訴他們：做一個好人，才是人生最重要的功課。",
+    "opening-p2":"德行，是一切成就的根基。一個有仁義、有誠信、有孝道的人，無論從事什麼職業——醫生、律師、商人、教師——都能做出正確的選擇，對家庭、對社會、對國家都是一股正面的力量。反之，一個才華橫溢卻缺乏德行的人，其才能愈大，帶來的危害也愈大。",
+    "opening-p3":"老祖宗早已看透這個道理。他們留下的儒家經典、孝經、弟子規、了凡四訓，不是古董，而是一套經過千年驗證的生命教育體系。這套智慧教導我們如何待人、如何處世、如何在面對誘惑與困境時，依然保持一顆清明正直的心。",
+    "opening-p4":"渥太華中華傳統智慧小院，正是為此而設——讓身處海外的華人子弟，乃至所有對中華文化有興趣的人，都能接觸到這份珍貴的智慧傳承，為下一代種下德行的種子，讓他們在任何時代、任何環境下，都能做出無愧於心的選擇。","what-h2":"老祖宗留下的<br>生命智慧寶藏",
     "what-p1":"漢學，廣義而言是對中國語言、歷史、哲學、文學與禮制的系統性研究；狹義而言，則是儒、釋、道三家思想相互融通、千年沉澱而成的生命教育體系。她不是博物館裏的古物，而是每一個當下依然呼吸著的活智慧。",
     "what-p2":"我們的老祖宗以文字為器，以禮樂為道，將宇宙人生的真理凝煉於一部部典籍之中。四書五經、諸子百家，每一字皆是無數聖賢以生命換來的體悟。",
     "what-def-label":"《說文解字》釋「漢」",
@@ -1560,18 +1600,22 @@ var TRANSLATIONS = {
     "pillars-p":"老祖宗以一生體悟凝煉而成，歷千年而不衰的人生根本。",
     "p1":"愛人之心","p2":"正直之道","p3":"秩序之美","p4":"明辨之能","p5":"誠實之德",
     "pillars-closing":"漢學不是過去，她是當下；不是書本，她是生命。願每一位與老祖宗智慧相遇的人，都能找到回家的路。",
-    "footer-org":"渥太華漢學學會","footer-org-en":"","footer-cal-title":"本月行事曆","footer-cal-note":"🔴 每週六上課　🟡 今天","footer-contact-title":"聯絡我們","footer-tagline-short":"弘揚中華文化　傳承聖賢教誨","footer-zoom-id":"Zoom 會議號：","footer-zoom-pw":"密碼：","footer-cal-title":"本月行事曆","footer-cal-note":"🔴 每週六上課　🟡 今天","footer-contact-title":"聯絡我們","footer-tagline-short":"弘揚中華文化　傳承聖賢教誨","footer-zoom-id":"Zoom 會議號：","footer-zoom-pw":"密碼：",
+    "footer-org":"渥太華中華傳統智慧小院","footer-org-en":"","footer-cal-title":"本月行事曆","footer-cal-note":"🔴 每週六上課　🟡 今天","footer-contact-title":"聯絡我們","footer-tagline-short":"弘揚中華文化　傳承聖賢教誨","footer-zoom-id":"Zoom 會議號：","footer-zoom-pw":"密碼：","footer-cal-title":"本月行事曆","footer-cal-note":"🔴 每週六上課　🟡 今天","footer-contact-title":"聯絡我們","footer-tagline-short":"弘揚中華文化　傳承聖賢教誨","footer-zoom-id":"Zoom 會議號：","footer-zoom-pw":"密碼：",
     "footer-tagline":"弘揚中華文化　傳承聖賢教誨　共建大同世界",
     "ev-eyebrow":"學會活動","ev-h2":"活動與講座",
-    "ev-intro":"渥太華漢學學會定期舉辦Zoom網上講座、研讀班及文化體驗活動，歡迎各界人士參與。"},
+    "ev-intro":"渥太華中華傳統智慧小院定期舉辦Zoom網上講座、研讀班及文化體驗活動，歡迎各界人士參與。"},
   en: {
-    "nav-org":"Ottawa Sinology Society","nav-org-en":"",
+    "nav-org":"Ottawa Chinese Traditional Wisdom Courtyard","nav-org-en":"",
     "nav-what":"What is Sinology","nav-wulun":"Five Relations","nav-tao":"Karma","nav-datong":"Great Unity","nav-jiao":"Education","nav-events":"Events","nav-contact":"Contact",
     "hero-seal":"漢學","hero-subtitle":"The River of Sages' Wisdom · A Heritage of Millennia",
     "hero-tagline":"The foundation of the world lies in the nation; of the nation in the family; of the family in the self.","scroll-hint":"↓ &nbsp; Explore",
     "conf-caption":"The Supreme Sage Confucius (551–479 BC)","conf-sub":"Teacher of Ten Thousand Generations · Soul of Chinese Civilization",
     "conf-quote":"I daily examine myself on three points: whether I have been faithful in conducting business for others; whether I have been sincere with friends; whether I have mastered my teacher's instructions.","conf-source":"The Analects · Chapter I",
-    "what-eyebrow":"What is Sinology","what-h2":"The Treasure of Life Wisdom<br>Left by Our Ancestors",
+    "what-eyebrow":"What is Sinology",
+    "opening-p1":"In today's world of relentless competition and moral decline, children are taught from an early age to pursue grades, status, and material success. Yet rarely does anyone tell them: becoming a good person is life's most important lesson.",
+    "opening-p2":"Virtue is the foundation of all achievement. A person grounded in benevolence, integrity, and filial piety — whatever profession they choose, whether doctor, lawyer, merchant, or teacher — will always make the right choices. They become a positive force for their family, their community, and their nation. Conversely, a person of great talent but no moral grounding does more harm the greater their ability.",
+    "opening-p3":"Our ancestors understood this deeply. The Confucian classics, the Classic of Filial Piety, Di Zi Gui, and Liaofan's Four Lessons are not relics of the past — they are a life-education system proven over a thousand years. This wisdom teaches us how to treat others, how to conduct ourselves, and how to keep a clear and upright heart even when facing temptation and hardship.",
+    "opening-p4":"The Ottawa Chinese Traditional Wisdom Courtyard was founded for this very purpose — to give Chinese families living abroad, and all those with an interest in Chinese culture, access to this precious heritage. We plant the seeds of virtue in the next generation, so that in any era and any circumstances, they can always make choices they are proud of.","what-h2":"The Treasure of Life Wisdom<br>Left by Our Ancestors",
     "what-p1":"Sinology is the systematic study of Chinese language, history, philosophy, literature, and ritual — a living system of life education distilled from Confucianism, Buddhism, and Taoism over thousands of years.",
     "what-p2":"Our ancestors crystallised the truths of the universe into volumes of classics. To study Sinology is to return to the source — to rediscover who we are, where we come from, and where we are going.",
     "what-def-label":"Shuowen Jiezi on the character 'Han'",
@@ -1611,14 +1655,14 @@ var TRANSLATIONS = {
     "pillars-p":"Refined through lifetimes of lived experience — enduring truths that have withstood a thousand years.",
     "p1":"Benevolence","p2":"Righteousness","p3":"Propriety","p4":"Wisdom","p5":"Faithfulness",
     "pillars-closing":"Sinology is not the past — it is the present. It is not a book — it is life itself. May all who encounter this wisdom find the way home.",
-    "footer-org":"Ottawa Sinology Society","footer-org-en":"","footer-cal-title":"Monthly Calendar","footer-cal-note":"🔴 Every Saturday class　🟡 Today","footer-contact-title":"Contact Us","footer-tagline-short":"Promoting Chinese Culture · Transmitting Sagely Teachings","footer-zoom-id":"Zoom Meeting ID:","footer-zoom-pw":"Passcode:","footer-cal-title":"Monthly Calendar","footer-cal-note":"🔴 Every Saturday · Class day　🟡 Today","footer-contact-title":"Contact Us","footer-tagline-short":"Promoting Chinese Culture · Transmitting Sagely Teachings","footer-zoom-id":"Zoom Meeting ID:","footer-zoom-pw":"Passcode:",
+    "footer-org":"Ottawa Chinese Traditional Wisdom Courtyard","footer-org-en":"","footer-cal-title":"Monthly Calendar","footer-cal-note":"🔴 Every Saturday class　🟡 Today","footer-contact-title":"Contact Us","footer-tagline-short":"Promoting Chinese Culture · Transmitting Sagely Teachings","footer-zoom-id":"Zoom Meeting ID:","footer-zoom-pw":"Passcode:","footer-cal-title":"Monthly Calendar","footer-cal-note":"🔴 Every Saturday · Class day　🟡 Today","footer-contact-title":"Contact Us","footer-tagline-short":"Promoting Chinese Culture · Transmitting Sagely Teachings","footer-zoom-id":"Zoom Meeting ID:","footer-zoom-pw":"Passcode:",
     "footer-tagline":"Promoting Chinese Culture · Transmitting Sagely Teachings · Building a World of Great Unity",
     "ev-eyebrow":"Society Events","ev-h2":"Events and Lectures",
     "nav-classics":"Why Study","nav-anthology":"Anthology",
     "ct-eyebrow":"Treasury of Classics",
     "ct-h2":"Gems from the Sagely Canons",
     "ct-intro":"The wisdom left by our ancestors is worth its weight in gold. Below are selected passages from Di Zi Gui, the Classic of Filial Piety, Taishang Ganying Pian, Liaofan's Four Lessons, and the Analects. May each reader savour them deeply.",
-    "ev-intro":"The Ottawa Sinology Society hosts Zoom classes, study groups, and cultural events. All are welcome.",
+    "ev-intro":"The Ottawa Chinese Traditional Wisdom Courtyard hosts Zoom classes, study groups, and cultural events. All are welcome.",
     "nav-classics":"Classics",
     "szj-eyebrow":"The Sagely Classics","szj-h2":"Why Study the Classics<br>of the Ancient Sages?",
     "szj-p1":"Today the world faces moral decline, broken families, and social turmoil. Yet the answer has always existed in the sagely classics left by our ancestors. Spanning millennia, they point to one truth: human nature is originally good; education is the foundation; self-cultivation comes first.",
@@ -1638,13 +1682,17 @@ var TRANSLATIONS = {
     "szj-src-mz2":"Mencius, Gaozi I","szj-v-mz2":"The way of learning is none other<br>than to seek the lost heart.",
     "szj-closing":"The sagely classics are the crystallisation of a thousand years of civilisation. Seven classics, one truth: human nature is originally good; we study to restore that goodness; we act to manifest it. This is the heart of sagely education and the mission of sinology." },
   fr: {
-    "nav-org":"Société de Sinologie d'Ottawa","nav-org-en":"",
+    "nav-org":"Cour de Sagesse Traditionnelle Chinoise d'Ottawa","nav-org-en":"",
     "nav-what":"La Sinologie","nav-wulun":"Cinq Relations","nav-tao":"Karma","nav-datong":"Grande Unité","nav-jiao":"Éducation","nav-events":"Événements","nav-contact":"Contact",
     "hero-seal":"漢學","hero-subtitle":"Le fleuve de la sagesse · Un héritage millénaire",
     "hero-tagline":"Le fondement du monde est la nation; celui de la nation est la famille; celui de la famille est l'individu.","scroll-hint":"↓ &nbsp; Explorer",
     "conf-caption":"Le Sage Suprême Confucius (551–479 av. J.-C.)","conf-sub":"Maître de dix mille générations · Âme de la civilisation chinoise",
     "conf-quote":"J'examine chaque jour trois points en moi-même : si j'ai été fidèle en agissant pour autrui ; si j'ai été sincère avec mes amis ; si j'ai pratiqué les enseignements de mon maître.","conf-source":"Les Entretiens · Chapitre I",
-    "what-eyebrow":"La Sinologie","what-h2":"Le trésor de sagesse<br>légué par nos ancêtres",
+    "what-eyebrow":"La Sinologie",
+    "opening-p1":"Dans le monde d'aujourd'hui, dominé par la compétition effrénée et le déclin moral, les enfants apprennent dès leur plus jeune âge à poursuivre les notes, le statut et la réussite matérielle. Pourtant, rares sont ceux qui leur disent : devenir une bonne personne est la leçon la plus importante de la vie.",
+    "opening-p2":"La vertu est le fondement de toute réussite. Une personne ancrée dans la bienveillance, l'intégrité et la piété filiale — quelle que soit sa profession, médecin, avocat, commerçant ou enseignant — prendra toujours les bonnes décisions. Elle devient une force positive pour sa famille, sa communauté et sa nation. À l'inverse, une personne très talentueuse mais sans ancrage moral fait d'autant plus de tort que ses capacités sont grandes.",
+    "opening-p3":"Nos ancêtres avaient compris cela en profondeur. Les classiques confucéens, le Classique de la piété filiale, le Di Zi Gui et les Quatre Leçons de Liaofan ne sont pas des reliques du passé — ce sont un système d'éducation à la vie éprouvé sur mille ans. Cette sagesse nous enseigne comment traiter les autres, comment nous conduire, et comment garder un cœur clair et droit même face à la tentation et à l'adversité.",
+    "opening-p4":"La Cour de Sagesse Traditionnelle Chinoise d'Ottawa a été fondée précisément dans ce but — offrir aux familles chinoises vivant à l'étranger, et à tous ceux qui s'intéressent à la culture chinoise, l'accès à cet héritage précieux. Nous plantons les graines de la vertu dans la prochaine génération, afin qu'en toute époque et en toutes circonstances, ils puissent toujours faire des choix dont ils sont fiers.","what-h2":"Le trésor de sagesse<br>légué par nos ancêtres",
     "what-p1":"La sinologie est l'étude systématique de la langue, de l'histoire, de la philosophie et des rites chinois — un système vivant d'éducation distillé du confucianisme, du bouddhisme et du taoïsme.",
     "what-p2":"Nos ancêtres ont cristallisé les vérités de l'univers dans des volumes de classiques. Étudier la sinologie, c'est retourner à la source.",
     "what-def-label":"Le Shuowen Jiezi sur le caractère 'Han'",
@@ -1684,14 +1732,14 @@ var TRANSLATIONS = {
     "pillars-p":"Raffinées à travers des vies d'expérience — des vérités durables qui ont résisté à mille ans.",
     "p1":"Bienveillance","p2":"Droiture","p3":"Bienséance","p4":"Sagesse","p5":"Fidélité",
     "pillars-closing":"La sinologie n'est pas le passé — c'est le présent. Ce n'est pas un livre — c'est la vie elle-même.",
-    "footer-org":"Société de Sinologie d'Ottawa","footer-org-en":"","footer-cal-title":"Calendrier du mois","footer-cal-note":"🔴 Chaque samedi cours　🟡 Aujourd'hui","footer-contact-title":"Nous contacter","footer-tagline-short":"Promouvoir la culture chinoise · Transmettre les enseignements des sages","footer-zoom-id":"ID Zoom :","footer-zoom-pw":"Code d'accès :","footer-cal-title":"Calendrier du mois","footer-cal-note":"🔴 Chaque samedi · Cours　🟡 Aujourd'hui","footer-contact-title":"Nous contacter","footer-tagline-short":"Promouvoir la culture chinoise · Transmettre les enseignements des sages","footer-zoom-id":"ID Zoom :","footer-zoom-pw":"Code d'accès :",
+    "footer-org":"Cour de Sagesse Traditionnelle Chinoise d'Ottawa","footer-org-en":"","footer-cal-title":"Calendrier du mois","footer-cal-note":"🔴 Chaque samedi cours　🟡 Aujourd'hui","footer-contact-title":"Nous contacter","footer-tagline-short":"Promouvoir la culture chinoise · Transmettre les enseignements des sages","footer-zoom-id":"ID Zoom :","footer-zoom-pw":"Code d'accès :","footer-cal-title":"Calendrier du mois","footer-cal-note":"🔴 Chaque samedi · Cours　🟡 Aujourd'hui","footer-contact-title":"Nous contacter","footer-tagline-short":"Promouvoir la culture chinoise · Transmettre les enseignements des sages","footer-zoom-id":"ID Zoom :","footer-zoom-pw":"Code d'accès :",
     "footer-tagline":"Promouvoir la culture chinoise · Transmettre les enseignements des sages · Construire un monde de Grande Unité",
     "ev-eyebrow":"Activités de la Société","ev-h2":"Événements et Conférences",
     "nav-classics":"Pourquoi étudier","nav-anthology":"Anthologie",
     "ct-eyebrow":"Trésor des classiques",
     "ct-h2":"Joyaux des canons des sages",
     "ct-intro":"La sagesse laissée par nos ancêtres vaut son pesant d'or. Voici des passages choisis du Di Zi Gui, du Classique de la piété filiale, du Taishang Ganying Pian, des Quatre Leçons de Liaofan et des Entretiens. Que chaque lecteur les savoure profondément.",
-    "ev-intro":"La Société de Sinologie d'Ottawa organise des cours Zoom, groupes d'étude et activités culturelles. Tous sont les bienvenus.",
+    "ev-intro":"La Cour de Sagesse Traditionnelle Chinoise d'Ottawa organise des cours Zoom, groupes d'étude et activités culturelles. Tous sont les bienvenus.",
     "nav-classics":"Classiques",
     "szj-eyebrow":"Les classiques des sages","szj-h2":"Pourquoi étudier les classiques<br>des sages anciens ?",
     "szj-p1":"Le monde connaît aujourd'hui le déclin moral, les familles brisées et les troubles sociaux. Pourtant la réponse a toujours existé dans les classiques des sages. Ces textes traversent les millénaires et pointent vers une seule vérité : la nature humaine est foncièrement bonne ; l'éducation est le fondement ; la culture de soi passe en premier.",
